@@ -1,0 +1,29 @@
+<div class="elevated-card">
+  <div *ngIf="!isLoading; else loading">
+    <div *ngIf="length > 0; else noTimeslots">
+      <div class="scrollable">
+        <div class="card" *ngFor="let keyValuePair of bookingsWithTimeSlots | keyvalue">
+          <div class="card-content">
+            <div class="date-time">
+              <p class="date">Date: {{ keyValuePair.value.date | dateFormat }}</p>
+              <p class="start-time">Start Time: {{ keyValuePair.value.startTime }}</p>
+            </div>
+            <p class="duration">Duration: {{ keyValuePair.value.duration }} minutes</p>
+            <p class="meeting-link" (click)="openMeeting(keyValuePair.value.meetingLink)">
+              <a>Meeting Link</a>
+            </p>
+            <div class="btn">
+            <button mat-raised-button color="warn" (click)="cancelBooking(keyValuePair.key)">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noTimeslots>
+      <h2 style="display: flex; justify-content: center;" (click)="routeToTimeslot()">Hi, No interview schedule!!</h2>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <h2 style="display: flex; justify-content: center;">Loading</h2>
+  </ng-template>
+</div>

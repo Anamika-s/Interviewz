@@ -1,0 +1,164 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7259"
+    },
+
+    "Routes": [
+         // Login Candidate
+        {
+            "UpstreamPathTemplate": "/login/candidate",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamPathTemplate": "/api/Authentication/candidate/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        },
+
+        // Login Recruiter
+        {
+            "UpstreamPathTemplate": "/login/recruiter",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamPathTemplate": "/api/Authentication/recruiter/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        },
+
+        // Get, Delete, Update by ID of Recruiter
+        {
+            "UpstreamPathTemplate": "/recruiters/{recruiterId}",
+            "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+            "DownstreamPathTemplate": "/api/recruiters/{recruiterId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        },
+
+        // Get-Post Recruiter
+        {
+            "UpstreamPathTemplate": "/recruiters",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/recruiters",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        }
+        ,
+
+        // Get, Delete, Update by ID of Candidate
+        {
+            "UpstreamPathTemplate": "/candidates/{candidateId}",
+            "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+            "DownstreamPathTemplate": "/api/candidates/{candidateId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        },
+
+        // Get-Post Candidate
+        {
+            "UpstreamPathTemplate": "/candidates",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/candidates",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7282
+                }
+            ]
+        },
+
+        // Get-Post feedback
+        {
+            "UpstreamPathTemplate": "/feedback",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/feedback",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7047
+                }
+            ]
+        },
+
+        // Get-Post BookingSlot
+        {
+            "UpstreamPathTemplate": "/bookingslots",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/BookingSlot",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7047
+                }
+            ]
+        },
+
+        // Get-Post TimeSlot
+        {
+            "UpstreamPathTemplate": "/timeslots",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/TimeSlot",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7047
+                }
+            ]
+        },
+
+        // Get, Delete, Update by ID of TimeSlot
+        {
+            "UpstreamPathTemplate": "/timeslots/{id}",
+            "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+            "DownstreamPathTemplate": "/api/TimeSlot/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7047
+                }
+            ]
+        },
+
+        // Get, Delete by ID of BookingSlot
+        {
+            "UpstreamPathTemplate": "/bookingslots/{id}",
+            "UpstreamHttpMethod": [ "Get", "Delete" ],
+            "DownstreamPathTemplate": "/api/BookingSlot/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7047
+                }
+            ]
+        },
+
+
+    ]
+}

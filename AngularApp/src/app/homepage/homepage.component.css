@@ -1,0 +1,192 @@
+/* h1{
+  font-size: 80px;
+  font-weight: 100;
+  color: black;
+  padding-left: 20px;
+  margin-top: -190px;
+  padding-bottom: 30px;
+}
+content{
+  font-size: 20px;
+ 
+  padding-left: 150px;
+  width: 80%;
+  font-weight: 500;
+  color: #fff;
+} */
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-left: 200px;
+  color: black;
+}
+.header h1{
+  font-size: 80px;
+  font-weight: 200;
+}
+h1 span{
+  text-shadow: 0 0 10px #ddd,
+               0 0 20px #ddd,
+               0 0 30px #ddd,
+               0 0 40px #ddd;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0%{
+    color: black;
+  }
+  50%{
+    color: rgb(243, 153, 168);
+  }
+  0%{
+    color: black;
+  }
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 60px;
+  padding-left: -80px;
+}
+.main .content{
+  font-size: 25px;
+}
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 192, 203, 0.74);
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: large;
+  font-weight: 500;
+}
+/* .self-writing-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 60px; 
+  font-weight: 350;
+  min-height: 70px;
+  cursor: default;
+  padding-left: 250px;
+  color: white;
+  margin-top: -60px;
+} */
+/* .app-description {
+  font-size: 30px; 
+  font-weight: bold; 
+  color: #ffffff; 
+  margin-top: 20px; 
+  width: 70%; 
+  flex: 1;
+  padding-right: 20px;
+  line-height: normal;
+} */
+
+
+  /* .highlight {
+    font-size: 50px; 
+    color: #00a2ff;
+  }
+   */
+  .calendar-container {
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    width: 100%; 
+    margin-top: 20px;
+  }  
+.calendar-container .schedule-button{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 430px;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    text-decoration: solid;
+    border: 0.5px ;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.87);
+    color: black;
+}
+.arrow{
+  background: #ff018dc2;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.2s;
+}
+
+button:hover .arrow {
+  width: 100%;
+}
+.calendar-container .schedule-button:hover{
+  color: black;
+}
+
+/* .highlight {
+  font-size: 50px; 
+  color: #00a2ff;
+} */
+
+/* .calendar-container {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}   */
+
+/* .calendar {
+  flex: 0.5;
+  float: right;
+  width: 30%;
+  margin-top: 20px;
+  text-align: center;
+} */
+
+/* .calendar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+} */
+
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+} */
+
+/* table th,
+table td {
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
+
+.highlight-current-date{
+  background: #00a2ff;
+  color: #fff;
+}
+
+td.inactive {
+  background-color: #fff;
+} */

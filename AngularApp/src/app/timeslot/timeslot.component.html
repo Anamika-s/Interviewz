@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card">
+    <div *ngIf="timeslots.length > 0; else noAvailability">
+      <div class="time-slot" *ngFor="let slot of timeslots">
+        <div class="slot-info">
+          <div class="day-date">
+            <span>Date: {{ slot.meetingDate | dateFormat }}</span>
+            <span>Start Time: {{ slot.meetingStartTime }}</span>
+          </div>
+          <div class="start-time">
+            <span>Duration: {{ slot.meetingDuration }} minutes</span>
+          </div>
+        </div>
+        <button class="book-button" (click)="booktimeslot(slot.meetingId)">Book</button>
+      </div>
+    </div>
+    <ng-template #noAvailability>
+      <h2 style="display: flex; justify-content: center;">Sorry! All slots are booked.</h2>
+    </ng-template>
+  </div>
+</div>

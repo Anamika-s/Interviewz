@@ -1,0 +1,22 @@
+<div class="timeslot-container">
+  <div class="elevated-card">
+      <h2>Hi, <span class="highlight">{{recruiterName | titlecase}}</span> set the interview schedule 
+      that works best for you!</h2>
+      <button mat-raised-button class="custom-green" (click)="createTimeslot()">Create Timeslot</button>
+      <div *ngIf="timeslotlist.length > 0;" (sendTimeslotList)="receiveDataFromCreateTimeslot($event)">
+        <!-- Display timeslots here -->
+        <div class="card" *ngFor="let timeslot of timeslotlist">
+          <div class="card-content">
+            <div class="date-time">
+              <p class="date">Date: {{ timeslot.meetingDate | dateFormat}}</p>
+              <p class="start-time">Start Time: {{ timeslot.meetingStartTime }}</p>
+            </div>
+            <p class="duration">Duration: {{ timeslot.meetingDuration }} minutes</p>
+            <p class="meeting-link">Meeting Link: {{ timeslot.meetingLink }}</p>
+            <button mat-raised-button color="warn" (click)="deleteTimeslot(timeslot.meetingId)">Delete</button>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,33 @@
+
+<mat-card class="login-card">
+<mat-tab-group>
+        <!-- Tab for Candidates -->
+        <mat-tab label="Candidate">
+            <form [formGroup]="loginCandidateForm" (ngSubmit)="loginCandidate(loginCandidateForm)">
+                <mat-form-field appearance="outline">
+                    <input matInput type="email" placeholder="Email" formControlName="Email" name="Email">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Password" formControlName="Password" name="Password">
+                </mat-form-field>
+                <button mat-raised-button type="submit" [disabled]="loginCandidateForm.invalid">Login</button>
+            </form>
+        </mat-tab>
+    
+        <!-- Tab for Recruiters -->
+        <mat-tab label="Recruiter">
+            <form [formGroup]="loginRecruiterForm" (ngSubmit)="loginRecruiter(loginRecruiterForm)">
+                <mat-form-field appearance="outline">
+                    <input matInput type="email" placeholder="Email" formControlName="Email" name="Email">
+                    <mat-error *ngIf="loginRecruiterForm.controls['Email'].hasError('required')">
+                        Please provide an Email
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <input matInput type="password" placeholder="Password" formControlName="Password" name="Password">
+                </mat-form-field>
+                <button mat-raised-button type="submit" [disabled]="loginRecruiterForm.invalid">Login</button>
+            </form>
+        </mat-tab>
+    </mat-tab-group>
+</mat-card>

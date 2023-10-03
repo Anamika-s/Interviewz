@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/de3c9b28-1bdf-4863-a195-9a50adbcced8/resourceGroups/team4rg/providers/Microsoft.Web/sites/authteam4",
+    "appService.deploySubpath": "dist"
+}

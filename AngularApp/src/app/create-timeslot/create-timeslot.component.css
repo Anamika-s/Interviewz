@@ -1,0 +1,42 @@
+.create-timeslot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elevated-card {
+  background-color: #f0f0f0;
+  /* Grey background color */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* Add elevation */
+  border-radius: 5px;
+  width: 30vw;
+}
+
+
+
+.custom-width {
+  width: 100%;
+}
+
+.submit-button {
+  background-color: green;
+  /* Grey button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: green;
+  opacity: 80%;
+  /* Darker grey on hover */
+}
+
+.submit-position{
+  display: flex;
+  justify-content: center;
+}

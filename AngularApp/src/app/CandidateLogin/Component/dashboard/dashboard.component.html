@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="elevated-card">
+    <h2>Hi, <span class="highlight">{{candidateName | titlecase}}</span> set the interview schedule that works best for you!</h2>
+    <div class="container">
+      <h3>List of Recruiters</h3>
+      <div class="recruiters-list">
+        <div class="recruiter-card" *ngFor="let recruiter of recruiters">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{recruiter.firstName}}</mat-card-title>
+              <mat-card-subtitle>{{recruiter.company}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+              <button mat-raised-button class="custom-green" (click)="showAvailability(recruiter.id)">Check Availability</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

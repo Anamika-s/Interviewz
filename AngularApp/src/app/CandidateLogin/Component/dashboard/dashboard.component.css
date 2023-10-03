@@ -1,0 +1,44 @@
+.elevated-card {
+    background-color: #f0f0f0;
+    /* Grey background color */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Add elevation */
+    border-radius: 5px;
+    width: 70vw;
+  }
+  
+  .recruiters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust the gap as needed */
+    justify-content: left;
+  }
+  
+  .custom-green{
+    background-color: green;
+  color: white;
+  }
+
+  .custom-green:hover{
+    background-color: green;
+    opacity: 80%;
+  }
+  .recruiter-card {
+    max-width: calc(33.33% - 20px); /* Two cards per row with a 20px gap */
+  }
+  
+  .example-card {
+    max-width: 100%;
+  }
+  
+  .example-header-image {
+    background-image: url("src\assets\Images\UserProfile.jpg");
+    background-size: cover;
+  }
+  
+  .highlight {
+    font-size: 40px;
+    color: #00a2ff;
+  }
+  

@@ -1,0 +1,139 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Ensure the app takes up the entire viewport height */
+}
+/* .content{
+  background-image: url(https://plus.unsplash.com/premium_photo-1679936310233-007f70a91869?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80);
+  background-size: cover;
+  max-height: max-content;
+  /* width: 100%; */
+ */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  background-image: url(https://images.unsplash.com/photo-1542361345-89e58247f2d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+  background-size: cover;
+  height: 450px;
+  background-size: cover;
+}
+
+
+.example-header-image {
+  background-image:white;
+  background-size: cover;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  /* Place the navbar at the top */
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  /* Add shadow to the bottom */
+  z-index: 2;
+  height: 50px;
+}
+
+
+
+.navbar-logo img {
+   height: 40px;
+   width: 120px;
+   padding-top: 5px;
+   color: white;
+}
+
+
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+
+.nav-item {
+  margin: 0 10px;
+}
+
+
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  margin: 0px 10px;
+}
+
+
+
+.nav-link:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+
+
+.navbar-auth {
+  display: flex;
+  gap: 10px;
+  margin-right: 35px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  height: auto; /* Override the height property */
+  line-height: normal; /* Override the line-height property */
+}
+
+
+
+.content {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;
+  z-index: 1;
+  margin: 70px 0px;
+  padding: 0px 15px 15px 15px;
+}
+
+
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 28px 0;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Add media queries for responsive design if needed */

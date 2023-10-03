@@ -1,0 +1,85 @@
+.timeslot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .elevated-card {
+    background-color: #f0f0f0; /* Grey background color */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add elevation */
+    border-radius: 5px;
+    width: 70vw;
+  }
+
+  .custom-green{
+    background-color: green;
+  color: white;
+  }
+
+  .custom-green:hover{
+    background-color: green;
+    opacity: 80%;
+  }
+  
+  .create-button {
+    background-color: grey; /* Grey button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-button:hover {
+    background-color: darkgrey; /* Darker grey on hover */
+  }
+  
+  .highlight {
+    font-size: 40px; 
+    color: #00a2ff;
+  }
+
+  .card {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    width: 90%; /* Set the width to 90% */
+    margin: 16px auto;
+  }
+
+  .card-custom{
+    width: 90%; /* Set the width to 90% */
+    margin: 16px auto;
+  }
+  
+  .card-content {
+    color: black;
+  }
+  
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .date,
+  .start-time,
+  .duration,
+  .meeting-link {
+    margin: 4px 0;
+  }
+  
+  .meeting-link {
+    word-wrap: break-word;
+  }
+  
+  .card-content p {
+    margin: 4px 0;
+  }
+  
+  /* Apply grey color to the text from the TypeScript component */
+  .grey-text {
+    color: grey;
+  }
+  
