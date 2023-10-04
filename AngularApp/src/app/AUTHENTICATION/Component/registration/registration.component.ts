@@ -19,7 +19,7 @@ export class RegistrationComponent  {
   registerCandidate() { 
     console.log("In Com " + JSON.stringify(this.candidate));
     
-    this.registrationService.registerCandidate(this.candidate).subscribe(
+    this.registrationService.registerCandidate(JSON.stringify(this.candidate)).subscribe(
       (response) => {
         console.log('Candidate registered:', response);
         this.router.navigate(['/login']);
@@ -31,7 +31,7 @@ export class RegistrationComponent  {
   }
 
   registerRecruiter() { 
-    this.registrationService.registerRecruiter(this.recruiter).subscribe(
+    this.registrationService.registerRecruiter(JSON.stringify(this.recruiter)).subscribe(
       (response) => {
         console.log('Recruiter registered:', response);
         this.router.navigate(['/login']);

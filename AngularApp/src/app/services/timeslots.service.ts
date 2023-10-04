@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
+
+const Headers = new HttpHeaders({
+  'Content-Type': 'application/json',
+});
 @Injectable({
   providedIn: 'root'
 })
 export class TimeslotsService {
 
-  url = "https://interviewserviceteam4.azurewebsites.net/api/timeslots"
+  url = "https://interqapp.azure-api.net/interviewapp/api/TimeSlot/"
   constructor(private httpClient: HttpClient) { }
 
   getTimeslots(): Observable<any>{

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookingsService{
-
-  url = "https://interviewserviceteam4.azurewebsites.net/api/bookingslot"
+  private url = 'https://interqapp.azure-api.net/interviewapp/api/BookingSlot';
+  // url = "https://interviewserviceteam4.azurewebsites.net/api/bookingslot"
 
   constructor(private httpclient : HttpClient) { }
 

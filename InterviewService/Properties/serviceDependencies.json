@@ -3,6 +3,10 @@
     "cosmosdb1": {
       "type": "cosmosdb",
       "connectionId": "ConnectionStrings:InterviewConnection"
+    },
+    "cosmosdb2": {
+      "type": "cosmosdb",
+      "connectionId": "ConnectionStrings:InterviewConnectionString"
     }
   }
 }

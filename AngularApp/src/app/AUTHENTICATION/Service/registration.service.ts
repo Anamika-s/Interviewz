@@ -4,7 +4,10 @@ import { Observable } from 'rxjs';
 
 
 const headers = new HttpHeaders({
-  'Content-Type': 'application/json'
+   
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "application/json",
+    "Accept": "application/json"   
 });
 
 @Injectable({
@@ -14,14 +17,16 @@ export class RegistrationService {
 
   private apiUrl = 'https://localhost:7259';
 
-  private candidateUrl = 'https://authserviceteam4.azurewebsites.net/api/candidates';
-  private recruiterUrl = 'https://authserviceteam4.azurewebsites.net/api/recruiters';
-
+  //private candidateUrl = 'https://authserviceteam4.azurewebsites.net/api/candidates';
+  private candidateUrl = 'https://interqapp.azure-api.net/interview-app/api/candidates';
+   // private recruiterUrl = 'https://authserviceteam4.azurewebsites.net/api/recruiters';
+  private recruiterUrl = 'https://interqapp.azure-api.net/interview-app/api/recruiters';
   constructor(private http: HttpClient) { }
 
   registerCandidate(candidateData: any) { 
     console.log(this.candidateUrl);
-    return this.http.post(`${this.candidateUrl}`, candidateData, { headers: headers }); 
+    return this.http.post(`${this.candidateUrl}`, candidateData,
+     { headers: headers }); 
   }
 
   registerRecruiter(recruiterData: any) {

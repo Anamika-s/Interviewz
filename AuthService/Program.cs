@@ -42,7 +42,7 @@ options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
 // Add services to the container.
 
-    var key = Encoding.ASCII.GetBytes("thisisasecretkeyisforCandidate&Recruiter"); 
+    var key = Encoding.UTF8.GetBytes("123456781234567812345678"); 
     builder.Services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -82,13 +82,14 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
-app.UseCors("AllowSpecificOrigin");
+//app.UseCors("AllowSpecificOrigin");
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

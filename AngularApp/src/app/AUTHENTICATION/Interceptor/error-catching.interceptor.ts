@@ -15,6 +15,7 @@ implements HttpInterceptor {
       const token = this._loginservice.getBearerToken();
 
       if (token) {
+        alert("token");
         request = request.clone({
             setHeaders: {Authorization: `Bearer ${token}`}
         });

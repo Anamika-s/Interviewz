@@ -4,7 +4,7 @@
   "parameters": {
     "resourceGroupName": {
       "type": "string",
-      "defaultValue": "rg",
+      "defaultValue": "team4rg",
       "metadata": {
         "_parameterType": "resourceGroup",
         "description": "Name of the resource group for the resource. It is recommended to put resources under same resource group for better tracking."
@@ -36,7 +36,7 @@
     },
     {
       "type": "Microsoft.Resources/deployments",
-      "name": "[concat(parameters('resourceGroupName'), 'Deployment', uniqueString(concat('authserviceaccount', subscription().subscriptionId)))]",
+      "name": "[concat(parameters('resourceGroupName'), 'Deployment', uniqueString(concat('interviewaccount', subscription().subscriptionId)))]",
       "resourceGroup": "[parameters('resourceGroupName')]",
       "apiVersion": "2019-10-01",
       "dependsOn": [
@@ -49,12 +49,12 @@
           "contentVersion": "1.0.0.0",
           "resources": [
             {
-              "name": "authserviceaccount",
+              "name": "interviewaccount",
               "location": "[parameters('resourceLocation')]",
               "type": "Microsoft.DocumentDB/databaseAccounts",
               "kind": "MongoDB",
               "systemData": {
-                "createdAt": "2023-10-02T13:47:54.4761727Z"
+                "createdAt": "2023-10-04T04:35:13.4831515Z"
               },
               "properties": {
                 "databaseAccountOfferType": "Standard"

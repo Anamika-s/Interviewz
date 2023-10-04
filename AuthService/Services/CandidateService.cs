@@ -13,15 +13,13 @@ namespace AuthService.Services
         public CandidateService(IOptions<UserDatabaseSettings> settings)
         {
             string connectionString =
-               @"mongodb://authserviceaccount:0IDEE5BVMQjOwuWdUXmf9RLgY0okH5pUqmSIdVHyxLBGuVakgKrA19HgSCt6WcTEvIVdKfAe6GC1ACDbRUcAfQ==@authserviceaccount.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@authserviceaccount@"; MongoClientSettings settings1 = MongoClientSettings.FromUrl(
+   @"mongodb://interviewaccount:KpnsJlvBv78Ibq1mMNWd0niUQN82afATFfozvnTksOLuIfEssstFdxOg7TZc66bZXVGuGSL8vVa0ACDb0ndgJg==@interviewaccount.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@interviewaccount@";
+            MongoClientSettings settings1 = MongoClientSettings.FromUrl(
               new MongoUrl(connectionString)
             );
             settings1.SslSettings =
               new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
             var mongoClient = new MongoClient(settings1);
-
-
-            mongoClient = new MongoClient(connectionString);
             var database = mongoClient.GetDatabase("UserDb");//.Value.DatabaseName);
             _candidates = database.GetCollection<Candidate>("Candidate");
         }

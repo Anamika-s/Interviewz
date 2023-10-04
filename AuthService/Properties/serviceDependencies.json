@@ -1,17 +1,12 @@
 {
   "dependencies": {
+    "apis1": {
+      "type": "apis"
+    },
     "cosmosdb1": {
       "type": "cosmosdb",
       "connectionId": "ConnectionStrings:MyConnection",
       "dynamicId": null
-    },
-    "cosmosdb2": {
-      "type": "cosmosdb",
-      "connectionId": "ConnectionStrings:MyConnection",
-      "dynamicId": null
-    },
-    "apis1": {
-      "type": "apis"
     }
   }
 }
